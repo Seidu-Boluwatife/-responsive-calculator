@@ -1,0 +1,91 @@
+/* we used css variables here*/
+
+:root{
+    --primary: #fff;
+    --button-color:#00FF00;
+    --dark:#131a26;
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans',sans-serif;
+}
+body{
+    background-color: var(--primary);
+}
+.App{
+    display:flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.calculator{
+    width:100%;
+    max-width: 400px;
+    background-color: var(--primary);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0,0,0,0.2) ;
+}
+.display{
+    padding: 16px;
+    text-align: right;
+    color: var(--primary);
+    background-color: var(--dark);
+    font-size:24px;
+    font-weight:300;
+    display: flex;
+    justify-content: space-between;
+   
+
+    
+}
+
+.display span{
+    font-size: 14px; 
+    color:#888;
+    
+}
+
+button{
+
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding:16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover{
+    opacity:0.9;
+    color:black;
+    transition: 0.5  s;
+    box-shadow: 0px 2px 64px rgba(0,0,0,0.2) ;
+    
+}
+
+.operators{
+    display: flex;
+
+}
+.operators button{
+    flex:1 1 0%;
+    background-color: #00FF00;
+    font-weight: 700;
+}
+
+.digits{
+    display: flex;
+    flex-wrap: wrap;
+}
+.digits button{
+    flex: 1 1 33.3333%;   /* this means flex width flex shrink flex basis*/
+    max-width:33.333%;
+    background-color: var(--button-color);
+}
